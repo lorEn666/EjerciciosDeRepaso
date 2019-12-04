@@ -9,12 +9,12 @@ public class Ejercicios {
 		int espacio, tiempo;
 
 		System.out.println("Introduzca distancia (metros) recorrida:");
-		espacio = leer.nextInt() / 1000;
+		espacio = leer.nextInt();
 
 		System.out.println("Introduzca tiempo (segundos) empleado en recorrerla:");
-		tiempo = leer.nextInt() / 3600;
+		tiempo = leer.nextInt();
 
-		System.out.println("La velocidad resultante es: " + (double) espacio / tiempo + " Km/h");
+		System.out.println("La velocidad resultante es: " + (double) (espacio / tiempo) * 3.6 + " Km/h");
 	}
 
 	public static void ejercicio3() {
@@ -159,6 +159,15 @@ public class Ejercicios {
 			System.out.println(i + " x " + numero + " = " + i * numero);
 		}
 	}
+	
+	public static void ejercicio11() {
+		Scanner leer = new Scanner(System.in);
+				
+		System.out.println("Inserte número:");
+		int numero = leer.nextInt();
+		
+		
+	}
 
 	public static void ejercicio12() {
 		Scanner leer = new Scanner(System.in);
@@ -168,11 +177,12 @@ public class Ejercicios {
 
 		numero = leer.nextInt();
 
-		for (int i = numero; i > 0; i--) {
-			factorial = factorial * i;
+		while (numero != 0) {
+			factorial *= numero;
+			numero--;
 		}
 
-		System.out.println("El factorial de " + numero + " es: " + factorial);
+		System.out.println("Su factorial es: " + factorial);
 	}
 
 }
